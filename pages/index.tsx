@@ -9,8 +9,8 @@ const Home: React.FC = () => {
 
   const filteredProperties = PROPERTYLISTINGSAMPLE.filter((property) => {
     return (
-      (categoryFilter === '' || property.category === categoryFilter) &&
-      (priceFilter === '' || property.price === priceFilter)
+      (categoryFilter === '' || property.category.includes(categoryFilter)) &&
+      (priceFilter === '' || property.price.toString() === priceFilter)
     );
   });
 
